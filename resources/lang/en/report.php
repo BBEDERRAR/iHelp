@@ -1,0 +1,45 @@
+<?php
+
+
+
+return [
+    'catchReceipts' => "Catch Receipts report",
+    'spentReceipts' => " Spent Receipts report" ,
+    'accountingReports' => "Accounting Reports" ,
+    "firstLevel"=> "First Level accounts",
+    "secondLevel" => "Second level accounts",
+    "thirdLevel" => "Third level accounts",
+    "fourthLevel" => "Fourth level accounts",
+    "byUser" => "By User",
+    "fromDate" => "Form date" ,
+    'toDate' => "To date",
+    'owner'=> 'Owner',
+    'isOwned'=> 'Owned',
+    'date'=> 'Dare' ,
+    'receipt_number'=> 'Receipt Number' ,
+    'receipt_type' => 'Receipt Type' ,
+    'details'=> 'Details' ,
+    'invoice'=> 'Invoice' ,
+    'catch_receipt' => "Catch receipt" ,
+    'customer' => 'Customer' ,
+    'account' => "Account" ,
+    'invoices' => 'الفواتير' ,
+    'invoiceId' => "Invoice Number" ,
+    'demandId' => "Demand number" ,
+
+
+    'management_reports' => 'Management reports' ,
+    'demands_reports' => 'Demands reports' ,
+    'customers_reports' => 'Customers reports',
+    'sms_reports' => 'SMS reports',
+    'customer_id' => 'Customer ID' ,
+    'customer_name' => 'Customer name' ,
+    'phone' => 'Phone' ,
+    'customer_type' => 'Customer Type' ,
+    'account_id'=> 'Account id' ,
+    'credit'=> 'credit' ,
+    'first_time' => 'First time',
+    'old' => 'Old' ,
+    'sms_id' => 'ID' ,
+    'user_id' => 'User ID' ,
+] ;

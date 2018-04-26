@@ -1,0 +1,42 @@
+<?php
+
+return [
+
+    "accountingGuide" => "الدليل المحاسبي",
+    "firstLevel"=> "المستوى الاول",
+    "secondLevel" => "المستوى الثاني",
+    "thirdLevel" => "المستوى الثالث",
+    "fourthLevel" => "المستوى الرابع",
+    "accountingInfo" => "معلومات الحساب",
+    "addNature"=> "اضافة طبيعة الحساب",
+    "addType"=> "اضافة نوع الحساب",
+    "natures"=> "طبيعة الحساب",
+    "types"=> "نوع الحساب",
+    "editNature" => "تعديل طبيعة الحساب",
+    "editType"=> "تعديل نوع الحساب",
+    "deleteNature"=> "حذف طبيعة الحساب",
+    "deleteType"=> "حذف نوع الحساب",
+    "natureInfo"=>"معلومات طبيعة الحساب",
+    "typeInfo" => "معلومات نوع الحساب",
+    "accountName" => "اسم الحساب",
+    "accountNature"=> "طبيعة الحساب",
+    "accountType"=> "نوع الحساب",
+    "credit"=> "الرصيد",
+    "accounts" => "الحسابات" ,
+    "addAccount" => "اضافة حساب",
+    "accountInfo"  => "معلومات الحساب" ,
+    "accountOrigin"  => "الحساب الاصل" ,
+    "settings" => "اعدادت",
+    "addSettings" => "اضافة اعدادات" ,
+    "editSettings" => " تعديل اعدادت" ,
+    "safes"=> "المخازن" ,
+    "settingsInfo"=> "معلومات حول الاعدادات",
+    "accountSettings"=> "اعدادت الحساب" ,
+    "invoiceSettings"=> "اعدادت الفواتير" ,
+    "buyInvoice" => "فاتورة الشراء",
+    "importInvoice"=> "فاتورة الاستراد",
+    "closeInvoice"=> "فاتورة الاغلاق" ,
+    "accountId" => "رقم"  ,
+
+
+];
