@@ -1,90 +1,97 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Laravel</title>
+@section('content')
+    <section style="background-color:#00D2DB!important;" class="text-center">
+        <img class="img-responsive " src="{{asset('img/cover.png')}}" alt="">
+    </section>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <section id="features" class="text-center">
+        <h1 class="wow animated flipInY">
+            Features
+        </h1>
+        <div class="container">
+            <div class="row">
 
-    <!-- Styles -->
+                <div class="col-md-8 p-5">
+                    <h3>
+                        <span class="text-danger wow animated fadeInUp">Cause 1# :</span>
+                        Ambulance patient quickly
+
+                    </h3>
+                    <p class=" wow animated fadeInUp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
+                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
+                        temporibus ullam ut. Inventore iure magni nisi.
+                    </p>
+                </div>
+                <div class="col-md-4 p-5">
+                    <img class="img-circle wow animated swing" src="{{asset('img/doctor.png')}}"
+                         alt="ي"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 p-5">
+                    <img class="img-circle wow animated swing" src="{{asset('img/syringe.png')}}"
+                         alt="ي"/>
+                </div>
+                <div class="col-md-8 p-5">
+                    <h3>
+                        <span class="text-danger wow animated fadeInUp">Cause 2# :</span>
+                        Medical Nursing
+
+                    </h3>
+                    <p class=" wow animated fadeInUp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
+                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
+                        temporibus ullam ut. Inventore iure magni nisi.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-8 p-5">
+                    <h3>
+                        <span class="text-danger wow animated fadeInUp">Cause 3# :</span>
+                        social solidarity
+
+                    </h3>
+                    <p class=" wow animated fadeInUp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
+                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
+                        temporibus ullam ut. Inventore iure magni nisi.
+                    </p>
+                </div>
+                <div class="col-md-4  p-5">
+                    <img class="img-circle wow animated swing" src="{{asset('img/care.png')}}"
+                         alt="ي"/>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+@endsection
+
+@section('css')
     <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
+
+
+        #features {
+            padding: 50px;
+            color: #FCFEFF !important;
+            background-color: #00D2DB !important;
         }
 
-        .full-height {
-            height: 100vh;
-        }
 
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
     </style>
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @if (Auth::check())
-                <a href="{{ url('/profile') }}">Profile</a>
-            @else
-                <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a>
-            @endif
-        </div>
-    @endif
+@endsection
 
-    <div class="content">
-        <div class="title m-b-md">
-            <img class="img-responsive" style="height: 300px" src="{{asset('img/logo.png')}}" alt="">
-            <h3 class="text-center" style="color: #6EC9F1">IHelp Project</h3>
-        </div>
+@section('js')
+    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script>
+        new WOW().init();
+    </script>
 
-
-    </div>
-</div>
-</body>
-</html>
+@endsection
