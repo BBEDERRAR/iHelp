@@ -44,7 +44,7 @@ class RequestController extends Controller
             return response()->json([
                 'status' => 'success',
                 'provider_location' => [
-                    'user_id' => '1'
+                    'user_id' => '1',
                     'longtitude' => $request->get('longtitude'),
                     'latitude' => $request->get('latitude')
                 ]
