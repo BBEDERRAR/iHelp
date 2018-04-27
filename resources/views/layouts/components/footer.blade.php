@@ -1,7 +1,5 @@
 <section class="footer">
     <div class="row justify-content-center">
-
-
         <div class="col-md-6">
             <span class="primary-color title">Social Media</span>
             <br><br>
@@ -21,7 +19,6 @@
                        target="_blank" rel="noopener">
                         <i class="fa fa-youtube"></i>
                     </a>
-
                 </div>
             </ul>
         </div>

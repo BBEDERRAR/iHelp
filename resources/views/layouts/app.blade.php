@@ -20,11 +20,9 @@
         body {
             font-family: 'Indie Flower', cursive;
         }
-
     </style>
 
     @yield('css')
-
 
 </head>
 <body>
