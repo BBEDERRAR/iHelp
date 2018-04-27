@@ -56,3 +56,8 @@ Route::group(['middleware' => ['permission:manage inbox']], function () {
     Route::post('/reply', 'InboxController@reply');
     Route::post('/sendMessage', 'InboxController@sendMessage');
 });
+
+
+
+// routes of RequestController
+
