@@ -6,10 +6,45 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Passport\Client;
 
 class ApiController extends Controller
 {
+    public function create(Request $request)
+    {
 
+
+        $data = request()->only('email','name','password');
+
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password'])
+        ]);
+
+
+        // And created user until here.
+
+        $client = Client::where('password_client', 1)->first();
+
+        // Is this $request the same request? I mean Request $request? Then wouldn't it mess the other $request stuff? Also how did you pass it on the $request in $proxy? Wouldn't Request::create() just create a new thing?
+
+        $request->request->add([
+            'grant_type'    => 'password',
+            'client_id'     => $client->id,
+            'client_secret' => $client->secret,
+            'username'      => $data['email'],
+            'password'      => $data['password'],
+            'scope'         => null,
+        ]);
+
+        // Fire off the internal request.
+        $token = Request::create(
+            'oauth/token',
+            'POST'
+        );
+        return \Route::dispatch($token);
+    }
 
     public function accessToken(Request $request)
 
@@ -112,111 +147,6 @@ class ApiController extends Controller
     {
         return ['status' => $status, 'data' => $data, 'message' => $msg, 'errors' => $errors];
     }
-
- /**
- *
- *     * Display a listing of the resource.
- *
- *     *
- *
- *     * @param  \Illuminate\Http\Request  $request
- *
- *     * @return \Illuminate\Http\Response
- *
- *     */
-
-   public function index(Request $request)
-
-   {
-       return $this->prepareResult(true, $request->user()->todo()->get(), [],"All user todos");
-   }
-
-
-   /**
- *
- *     * Display the specified resource.
- *
- *     *
- *
- *     * @param  \App\Todo  $todo
- *
- *     * @return \Illuminate\Http\Response
- *
- *     */
-
-   public function show(Request $request, Todo $todo)
-
-   {
-           if($todo->user_id == $request->user()->id){
-               return $this->prepareResult(true, $todo, [], "All results fetched");
-       }else{
-                   return $this->prepareResult(false, [], "unauthorized", "You are not authenticated to view this todo");
-       }
-   }
-
-
-
-   /**
- *
- *     * Store a newly created resource in storage.
- *
- *     *
- *
- *     * @param  \Illuminate\Http\Request  $request
- *
- *     * @return \Illuminate\Http\Response
- *
- *     */
-
-   public function store(Request $request)
-
-   {
-           $error = $this->validations($request, "create todo");
-       if($error['error']){
-           return $this->prepareResult(false, [], $error['errors'], "Error in creating todo");
-       } else {
-                   $todo = $request->user()->todo()->Create($request->all());
-           return $this->prepareResult(true, $todo, $error['errors'], "Todo created");
-
-       }
-
-   }
-
-
-
-   /**
- *
- *     * Update the specified resource in storage.
- *
- *     *
- *
- *     * @param  \Illuminate\Http\Request  $request
- *
- *     * @param  \App\Todo  $todo
- *
- *     * @return \Illuminate\Http\Response
- *
- *     */
-
-   public function update(Request $request, Todo $todo)
-
-   {
-           if($todo->user_id == $request->user()->id){
-              $error = $this->validations($request, "update todo");
-           if($error['error']){
-               return $this->prepareResult(false, [], $error['errors'], "error in updating data");
-           } else {
-                       $todo = $todo->fill($request->all())->save();
-               return $this->prepareResult(true, $todo, $error['errors'], "updating data");
-           }
-
-       }else{
-                   return $this->prepareResult(false, [], "unauthorized", "You are not authenticated to edit this todo");
-       }
-   }
-
-
-
 
 
 }
