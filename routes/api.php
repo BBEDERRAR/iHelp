@@ -25,8 +25,3 @@ Route::post('acceptRequest', 'RequestController@acceptRequest');
 
 Route::get('/login','ApiController@accessToken');
 Route::post('/register','ApiController@create');
-
-
-
-
-
