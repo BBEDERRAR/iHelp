@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <section style="background-color:#00D2DB!important;" class="text-center">
         <img class="img-responsive " src="{{asset('img/cover.png')}}" alt="">
     </section>
@@ -17,7 +18,7 @@
                         <span class="text-danger wow animated fadeInUp">Cause 1# :</span>
                         Quick intervention
                     </h3>
-                    <p class=" wow animated fadeInUp">
+                    <p class=" wow animated fadeInUpfeatures">
 
                         Life rescue is one of our noble tasks , where the medium time of intervention may cause
                         some premordial consequences So we aim to optimisate that time by exploiting the rescuers
@@ -40,7 +41,7 @@
                         Medical Nursing
 
                     </h3>
-                    <p class=" wow animated fadeInUp">
+                    <p class=" wow animated fadeInUpfeatures">
                         Some of patients require a special assistance where they can't move into the hospital
                         to get the nursing need where our application be part of your medical intervention
                     </p>
@@ -54,7 +55,7 @@
                         social solidarity
 
                     </h3>
-                    <p class=" wow animated ">
+                    <p class=" wow animated features">
                         Our work aim to get a social solidarity by exploiting the the capacity of humen help
                     </p>
                 </div>

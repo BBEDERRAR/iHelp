@@ -12,13 +12,16 @@
     <link href="{{asset('css/animate.css')}}" rel="stylesheet"/>
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/logo.png')}}">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <style>
 
 
         body {
             font-family: 'Indie Flower', cursive;
+        }
+        .features{
+            font-family: 'PT Sans', sans-serif;
         }
     </style>
 
