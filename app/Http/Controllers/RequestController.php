@@ -28,24 +28,7 @@ class RequestController extends Controller
         return response()->json([
             'request_id' => $req->id,
             'status' => 'success',
-            'locations' =>
-                [
-                    [
-                        'user_id' => '1',
-                        'longtitude' => $request->get('longtitude'),
-                        'latitude' => $request->get('latitude')
-                    ],
-                    [
-                        'user_id' => '1',
-                        'longtitude' => $request->get('longtitude'),
-                        'latitude' => $request->get('latitude')
-                    ],
-                    [
-                        'user_id' => '1',
-                        'longtitude' => $request->get('longtitude'),
-                        'latitude' => $request->get('latitude')
-                    ]
-                ]
+            'locations' => $array
         ]);
     }
 
