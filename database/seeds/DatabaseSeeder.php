@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
 
         $role->givePermissionTo(Permission::all());
 
-        for ($i = 0, $i < 10, $i++) {
+        for ($i = 0; $i < 10; $i++) {
             \App\User::create([
                 'name' => 'resucer_'.$i,
                 'email' => $i.'resucer@resucer.com',
