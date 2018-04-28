@@ -7,7 +7,7 @@
 
     <section id="features" class="text-center">
         <h1 class="wow animated flipInY">
-            Features
+            Be part of us !
         </h1>
         <div class="container">
             <div class="row">
@@ -15,13 +15,13 @@
                 <div class="col-md-8 p-5">
                     <h3>
                         <span class="text-danger wow animated fadeInUp">Cause 1# :</span>
-                        Ambulance patient quickly
-
+                        Quick intervention
                     </h3>
                     <p class=" wow animated fadeInUp">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
-                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
-                        temporibus ullam ut. Inventore iure magni nisi.
+
+                        Life rescue is one of our noble tasks , where the medium time of intervention may cause
+                        some premordial consequences So we aim to optimisate that time by exploiting the rescuers
+                        public
                     </p>
                 </div>
                 <div class="col-md-4 p-5">
@@ -41,9 +41,8 @@
 
                     </h3>
                     <p class=" wow animated fadeInUp">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
-                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
-                        temporibus ullam ut. Inventore iure magni nisi.
+                        Some of patients require a special assistance where they can't move into the hospital
+                        to get the nursing need where our application be part of your medical intervention
                     </p>
                 </div>
             </div>
@@ -55,10 +54,8 @@
                         social solidarity
 
                     </h3>
-                    <p class=" wow animated fadeInUp">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis incidunt vero voluptatum?
-                        Ad animi cupiditate deleniti, deserunt dicta, expedita libero molestiae, molestias praesentium
-                        temporibus ullam ut. Inventore iure magni nisi.
+                    <p class=" wow animated ">
+                        Our work aim to get a social solidarity by exploiting the the capacity of humen help
                     </p>
                 </div>
                 <div class="col-md-4  p-5">
