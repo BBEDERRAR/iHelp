@@ -21,7 +21,7 @@
             font-family: 'Indie Flower', cursive;
         }
         .features{
-            font-family: 'PT Sans', sans-serif !important;
+            font-family: 'PT Sans', sans-serif ;
         }
     </style>
 
