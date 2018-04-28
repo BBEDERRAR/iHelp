@@ -45,5 +45,16 @@ class DatabaseSeeder extends Seeder
         $admin->assignRole('admin');
 
         $role->givePermissionTo(Permission::all());
+
+        for ($i = 0, $i < 10, $i++) {
+            \App\User::create([
+                'name' => 'resucer_'.$i,
+                'email' => $i.'resucer@resucer.com',
+                'password' => bcrypt('123456'),
+                'lng' => $i*2.4,
+                'lat' => $i*2.7,
+                'active' => 1
+            ]);
+        }
     }
 }

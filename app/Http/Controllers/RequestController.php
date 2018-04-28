@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
@@ -13,6 +14,17 @@ class RequestController extends Controller
             'longtitude' => $request->get('longtitude'),
             'latitude' => $request->get('latitude')
         ]);
+
+        $array = [];
+        foreach (User::all() as $user) {
+            array_push($array,
+                [
+                    'user_id' => $user->id,
+                    'longtitude' => $user->lng,
+                    'latitude' => $user->lat
+                ]
+            );
+        }
         return response()->json([
             'request_id' => $req->id,
             'status' => 'success',
