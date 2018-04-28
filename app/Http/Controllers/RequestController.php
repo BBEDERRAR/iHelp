@@ -25,6 +25,7 @@ class RequestController extends Controller
                 ]
             );
         }
+
         return response()->json([
             'request_id' => $req->id,
             'status' => 'success',
