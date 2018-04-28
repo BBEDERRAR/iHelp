@@ -22,7 +22,7 @@
                 </div>
             </ul>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 p-1">
             <span class="primary-color title">Our News</span>
             <br><br>
             <form action="{{url('addEmail')}}" method="post">
